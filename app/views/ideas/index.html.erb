@@ -1,0 +1,14 @@
+<ul>
+<% @ideas.each do |idea| %>
+	<li>	
+			<%= idea.title %>
+			<%= idea.description %>
+	<%= link_to "Show", idea_path(idea) %>
+	<%= link_to "Edit", edit_idea_path(idea) %>
+	<%= link_to "Delete", idea_path(idea), :method => :delete, :data => {:confirm => "Are you sure you want to delete your idea? " }%>
+	</li>
+<%end%>
+</ul>
+<%= link_to 'New Idea', new_idea_path %>
+
+<%= paginate @ideas %>
