@@ -1,5 +1,7 @@
-<%= form_for @idea, :url => idea_path(@idea), :method => patch do |f| %>
+
+
+<%= form_for @idea, :url => ideas_path(@idea) do |f| %>
     <%= render :partial => 'form', :locals => {:f => f} %>
 	
-    <%= f.submit "Create" %>
+    <%= f.submit "Create",:class => "btn btn-primary" %>
 <% end %>

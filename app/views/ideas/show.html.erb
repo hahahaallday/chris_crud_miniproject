@@ -1,5 +1,18 @@
-<%= @idea.title %>
-<%= simple_format(@idea.description) %>
-<%= simple_format(@idea.analysis_content) %>
+<div class=container>
+	<div class =row>
+		<divclass = col-md-12>
+			<div>
+				<h1>Idea: <%= @idea.title %></h1>	
+			</div>
 
-<p><%= link_to 'Back to index', ideas_path' %></p>
+			<div>
+				<h5>Description:  <%= simple_format(@idea.description) %></h5>	
+			</div>
+			<div>
+				<p>Analysis:  <%= simple_format(@idea.analysis_content) %></p>	
+			</div>
+			<p><%= link_to 'Back to index', ideas_path ,:class => "btn btn-primary" %></p>
+		</div>
+	</div>
+</div>
+

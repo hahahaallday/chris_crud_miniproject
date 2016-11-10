@@ -1,5 +1,5 @@
 <%= form_for @idea, :url => { :controller => 'ideas', :action => 'update', :id => @idea } do |f| %>
     <%= render :partial => 'form', :locals => {:f => f} %>
 
-    <%= f.submit "Update" %>
+    <%= f.submit "Update", :class => "btn btn-primary" %>
 <% end %>

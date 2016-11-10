@@ -1,4 +1,5 @@
 class IdeasController < ApplicationController
+	
 	before_action :set_idea, :only =>[:show , :edit, :update, :destroy]
 
 	def index
@@ -13,8 +14,8 @@ class IdeasController < ApplicationController
 		@idea = Idea.new(idea_params)
 		
 		if @idea.save
-			flash[:notice] = "idea buwas successfully created"
-			redirect_to idea_url		
+			flash[:notice] = "idea was successfully created"
+			redirect_to ideas_url		
 		else
 			render :action => :new
 		end	
@@ -40,7 +41,7 @@ class IdeasController < ApplicationController
 	def destroy
 		@idea.destroy
 		flash[:alert] = "idea was successfully deleted"
-		redirect_to idea_url
+		redirect_to ideas_url
 	end
 
 	private
